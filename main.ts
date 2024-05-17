@@ -335,7 +335,7 @@ namespace Robobox {
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
     //% subcategory="Fahren Basic" weight=110
     export function Manuvalvd(links_rechts_index: links_rechts_bewegung, delay: number ): void {
-      if(links_rechts_index == 0) {
+      if(links_rechts_index != 0) {
         MotorRun(0x1, speed_custom_r-trim_l);
       MotorRun(0x3, speed_custom_l-trim_r);
       basic.pause(delay);
@@ -353,7 +353,7 @@ namespace Robobox {
   //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
   //% subcategory="Fahren Basic" weight=110
     export function Manuvalrd(links_rechts_index: links_rechts_bewegung, delay: number ): void {
-        if(links_rechts_index == 0) {
+        if(links_rechts_index != 0) {
       MotorRun(0x2, -speed_custom_r+trim_l);
       MotorRun(0x4, -speed_custom_l+trim_r);
       basic.pause(delay);
@@ -372,7 +372,7 @@ namespace Robobox {
   //% subcategory="Fahren Basic" weight=110
 
  export function Manuvarrs(links_rechts_index: links_rechts_bewegung, delay: number ): void {
-      if(links_rechts_index == 0) {
+      if(links_rechts_index != 0) {
     MotorRun(0x1, speed_custom_r-trim_l);
     MotorRun(0x2, -speed_custom_r+trim_l);
     MotorRun(0x3, speed_custom_l-trim_r);
